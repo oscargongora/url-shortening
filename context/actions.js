@@ -1,0 +1,3 @@
+const TOGGLE_SIDE_NAV = "TOGGLE_SIDE_NAV";
+
+export { TOGGLE_SIDE_NAV };
