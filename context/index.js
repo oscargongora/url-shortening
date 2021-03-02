@@ -4,7 +4,9 @@ import reducer from "./reducer";
 
 const initialAppState = {
   showSideNav: false,
-  data: {},
+  data: {
+    shortenUrl: [],
+  },
 };
 
 const ApppContext = createContext();

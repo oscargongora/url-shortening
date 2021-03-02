@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import ShortenForm from "./ShortenForm";
+import AdvancedStatistics from "./AdvancedStatistics";
+import BoostLinksToday from "./BoostLinksToday";
 
 const Home = () => {
   return (
@@ -22,12 +25,9 @@ const Home = () => {
           />
         </div>
       </div>
-      <div id="short-section">
-        <div id="short-form">
-          <input placeholder="Shorten a link here..." type="text" />
-          <button>Shorten It!</button>
-        </div>
-      </div>
+      <ShortenForm></ShortenForm>
+      <AdvancedStatistics></AdvancedStatistics>
+      <BoostLinksToday></BoostLinksToday>
     </main>
   );
 };
