@@ -20,8 +20,8 @@ const Home = () => {
           <Image
             src="/images/illustration-working.svg"
             alt="Hero image"
-            width={609}
-            height={482}
+            width={608.31}
+            height={481.47}
           />
         </div>
       </div>
