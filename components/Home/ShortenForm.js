@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const ShortenForm = () => {
   const [urls, setUrls] = useState([]);
   const [url, setUrl] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const _urls = sessionStorage.getItem("urls");
@@ -44,18 +45,21 @@ const ShortenForm = () => {
     const resData = await res.json();
     if (resData.ok) {
       addUrl({ ...resData.result, copied: false });
+      setError("");
     } else {
+      setError(resData.error);
     }
   };
 
   return (
     <div id="short-section">
-      <div id="short-form">
+      <div id="short-form" className={error ? "has-error" : ""}>
         <input
           placeholder="Shorten a link here..."
           type="text"
           onChange={handleUrlInputChange}
         />
+        <span className="error-message">{error}</span>
         <button onClick={handleShortUrl}>Shorten It!</button>
       </div>
       <div className="recents-shorts">

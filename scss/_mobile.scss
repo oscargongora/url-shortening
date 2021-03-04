@@ -171,6 +171,9 @@ header {
           outline: none;
         }
       }
+      .error-message {
+        display: none;
+      }
       button {
         font-size: 18px;
         font-weight: $bold-fw;
@@ -179,6 +182,18 @@ header {
         border-radius: 5px;
         background-color: $cyan;
         color: $white-text;
+      }
+      &.has-error {
+        input {
+          border: 2px solid red;
+        }
+        .error-message {
+          display: initial;
+          color: red;
+          margin: 0 0 8px;
+          font-size: 14px;
+          font-weight: 300;
+        }
       }
     }
 
